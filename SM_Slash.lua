@@ -479,7 +479,8 @@ function FindBuff( obuff, unit, item)
 		return "track",b;
 	end
 	local c=nil;
-	for i=1, 16 do
+	-- 修改为32位buff xhwsd@qq.com 2024-11-24
+	for i=1, 32 do
 		tooltip:SetOwner(UIParent, "ANCHOR_NONE");
 		tooltip:SetUnitBuff(unit, i);
 		b = textleft1:GetText();
@@ -492,7 +493,8 @@ function FindBuff( obuff, unit, item)
 		--c = b;
 	end
 	c=nil;
-	for i=1, 16 do
+	-- 修改为32位debuff xhwsd@qq.com 2024-11-24
+	for i=1, 32 do
 		tooltip:SetOwner(UIParent, "ANCHOR_NONE");
 		tooltip:SetUnitDebuff(unit, i);
 		b = textleft1:GetText();
