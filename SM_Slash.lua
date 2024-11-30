@@ -480,6 +480,7 @@ function FindBuff( obuff, unit, item)
 	end
 	local c=nil;
 	-- 修改为32位buff xhwsd@qq.com 2024-11-24
+	-- 文档中描述debuff数为32 https://turtle-wow.fandom.com/wiki/API_UnitBuff
 	for i=1, 32 do
 		tooltip:SetOwner(UIParent, "ANCHOR_NONE");
 		tooltip:SetUnitBuff(unit, i);
@@ -493,8 +494,9 @@ function FindBuff( obuff, unit, item)
 		--c = b;
 	end
 	c=nil;
-	-- 修改为32位debuff xhwsd@qq.com 2024-11-24
-	for i=1, 32 do
+	-- 修改为64位debuff xhwsd@qq.com 2024-11-24
+	-- 文档中描述debuff数为64 https://turtle-wow.fandom.com/wiki/API_UnitDebuff
+	for i=1, 64 do
 		tooltip:SetOwner(UIParent, "ANCHOR_NONE");
 		tooltip:SetUnitDebuff(unit, i);
 		b = textleft1:GetText();
