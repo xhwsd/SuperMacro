@@ -1,4 +1,7 @@
 
+3.19
+适配乌龟魔兽buff和debuff位数
+
 3.18 new improved user interface by Horu:
 Add option to change macros window size (removed old background textures)
 Add option to change window script font size
